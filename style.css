@@ -1,0 +1,49 @@
+.top-strip{
+    width: 100%;
+    height: 30px;
+    background-color:rgb(3, 163, 255);
+
+}
+
+.custom-button {
+    background-color:rgb(255, 255, 255);
+    color: rgb(77, 183, 244); /* Set the text color */
+    border: none; /* Remove the border */
+}
+.custom-button:hover {
+    background-color: rgb(77, 183, 244); /* Set the hover color here */
+    color: white;
+}
+
+.carousel-image{
+    position: inherit;
+    width : 1000px;
+    height : auto;
+}
+
+
+.custom-button-donate {
+    background-color:rgb(255, 255, 255);
+    color: rgb(128, 196, 76); /* Set the text color */
+    border: none; /* Remove the border */
+}
+.custom-button-donate:hover {
+    background-color: rgb(128, 196, 76); /* Set the hover color here */
+    color: white;
+}
+
+
+
+.custom-button-learn-more {
+    background-color:rgb(255, 255, 255);
+    color: rgb(203, 148, 60); /* Set the text color */
+    border: none; /* Remove the border */
+}
+.custom-button-learn-more:hover {
+    background-color: rgb(203, 148, 60); /* Set the hover color here */
+    color: white;
+}
+
+.info{
+    color: rgb(169, 169, 169);
+}

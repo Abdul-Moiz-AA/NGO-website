@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<div class = "top-strip"></div>
+<div class = "container-md d-flex justify-content-center align-items-center text-center">
+    <div class = "row">
+        <div class = "col d-flex justify-content-center align-items-center">
+            <img class="rounded float-end" src = "img/placeholder logo.png" >
+        </div>
+        <div class = "col d-flex justify-content-left align-items-center" style="font-family: 'Times New Roman', Times, serif;">
+            <div>
+                <h1 class="info"> Patel educational and welfare trust</h1>
+            </div>
+        </div>
+    </div>  
+</div>
+<div class  = "container-md my-3 d-flex justify-content-center align-items-center">
+    <div class = "row">
+        <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="index.html#top" class="btn custom-button btn-lg">Home</a>
+                <button type="button" class="btn custom-button btn-lg">Donations</button>
+                <button type="button" class="btn custom-button btn-lg">Contact</button>
+            </div>  
+        </div>
+        <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="dropdown">
+                    <button class="btn custom-button dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item active" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn custom-button dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Projects
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item active" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </div> 
+</div>
+<div id = "donation-form" class="container-md d-flex justify-content-center my-5">
+<form action="/submit" method="post">
+    <div class="row mb-3">
+      <label for="inputName" class="col col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputName">
+      </div>
+    </div>
+    
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col pt-0">Amount</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Amount" id="gridRadios1" value="50" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Rs.50
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Amount" id="gridRadios2" value="100">
+          <label class="form-check-label" for="gridRadios2">
+            Rs.100
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Amount" id="gridRadios3" value="500">
+          <label class="form-check-label" for="gridRadios3">
+            Rs.500
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <div class="row mb-3">
+      <label for="inputMessage" class="col col-form-label">Message</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputMessage">
+      </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-5">
+            <button type="submit" class="btn custom-button-donate">Donate</button>
+        </div>  
+      
+    </div>
+    
+  </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src = "js/bootstrap.min.js"></script>    
+</body>
+</html>
