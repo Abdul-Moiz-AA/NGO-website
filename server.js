@@ -13,7 +13,7 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'my_database'
+    database: 'ngo_website'
 });
 
 // Connect to the database
@@ -29,7 +29,7 @@ db.connect((err) => {
 app.post('/submit', (req, res) => {
     const { inputName, inputMessage , Amount} = req.body;
 
-    const sql = 'INSERT INTO users (name, message, Amount ) VALUES (?, ?, ?)';
+    const sql = 'INSERT INTO users (name, message, amount ) VALUES (?, ?, ?)';
     db.query(sql, [inputName, inputMessage, Amount], (err, result) => {
         if (err) {
             console.error('Error inserting data:', err);
