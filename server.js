@@ -26,11 +26,15 @@ db.connect((err) => {
 });
 
 // Handle form submission
-app.post('/submit', (req, res) => {
-    const { inputName, inputMessage , Amount} = req.body;
+let serial = 0; // Initialize serial variable
 
-    const sql = 'INSERT INTO users (name, message, amount ) VALUES (?, ?, ?)';
-    db.query(sql, [inputName, inputMessage, Amount], (err, result) => {
+app.post('/submit', (req, res) => {
+    const { inputName, inputMessage, Amount } = req.body;
+
+    serial++; // Increment serial variable
+
+    const sql = 'INSERT INTO users (serial, name, message, amount) VALUES (?, ?, ?, ?)';
+    db.query(sql, [serial, inputName, inputMessage, Amount], (err, result) => {
         if (err) {
             console.error('Error inserting data:', err);
             res.send('Error occurred while saving data.');
@@ -42,4 +46,16 @@ app.post('/submit', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
+});
+
+app.get('/donations', (req, res) => {
+    const sql = 'SELECT name, message, amount FROM users ORDER BY serial DESC LIMIT 10';
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error('Error fetching data:', err);
+            res.status(500).send('Error occurred while fetching data.');
+            return;
+        }
+        res.json(results);
+    });
 });

@@ -26,6 +26,10 @@
     background-color:rgb(255, 255, 255);
     color: rgb(128, 196, 76); /* Set the text color */
     border: none; /* Remove the border */
+    width: auto;
+    max-width: 500px;
+    height: 40px;
+    font-size: 16px;
 }
 .custom-button-donate:hover {
     background-color: rgb(128, 196, 76); /* Set the hover color here */
@@ -46,4 +50,41 @@
 
 .info{
     color: rgb(169, 169, 169);
+}
+
+.content {
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 100px;
+}
+.campaign-info
+{
+    font-size: 1.2em; 
+    color: #333; 
+    line-height: 1.6; 
+    margin-top: 15px;
+}
+
+.campaign-banner{
+    width: 100%;
+    height: auto;
+    background-color: rgb(232, 249, 255);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgb(77, 183, 244);
+    color: white;
+  }
+
+.dropdown-item-custom {
+    background-color: white;
+    border: 1px solid rgb(77, 183, 244);
 }
